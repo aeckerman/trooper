@@ -9,7 +9,7 @@ git clone https://github.com/blubrackets/trooper.git
 cd trooper
 source setup.sh
 ```
-Then restart your terminal and run this command.
+Then restart your terminal and run this command.<br>
 `troop --help`
 
 # Usage
