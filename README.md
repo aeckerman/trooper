@@ -1,16 +1,13 @@
 # Trooper
-A simple and light git helper.
+Trek back to your repo...
 
 # Installation
-Run these commands in your terminal.
-```
-cd ~
-git clone https://github.com/blubrackets/trooper.git
-cd trooper
-source setup.sh
-```
-Then restart your terminal and run this command.<br>
-`troop --help`
+1. `cd /usr/local`
+2. `git clone https://github.com/blubrackets/trooper`
+3. `cd ~`
+4. `echo "export PATH=$PATH:/usr/local/trooper/bin" >> .bash_profile`
+5. Restart command line...
+6. `trooper --help`
 
 # Usage
-`troop [git_username] [repository_name]`
+`trooper [git_username] [repository_name]`
