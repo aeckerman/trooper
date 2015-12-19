@@ -10,7 +10,8 @@ def pop():
 @click.command()
 @click.argument('git_username')
 @click.argument('repository_name')
-def cli(git_username, repository_name):
+@click.option('--branch', '-b', default='master', help='Changes branch default is "master".')
+def cli(git_username, repository_name, branch):
 	os.system('touch ~/git_out')
 	pop()
 	os.system('git init > ~/git_out')
@@ -25,7 +26,7 @@ def cli(git_username, repository_name):
 	os.system('git commit -m "Trooper commit." > ~/git_out')
 	print(Style.BRIGHT + Fore.GREEN + 'Commiting files...' + Style.RESET_ALL + Fore.RESET)
 	pop()
-	os.system('git push origin master > ~/git_out')
+	os.system('git push origin %s > ~/git_out' % (branch))
 	print(Style.BRIGHT + Fore.GREEN + 'Finalizing...' + Style.RESET_ALL + Fore.RESET)
 	pop()
 	os.system('rm ~/git_out')
