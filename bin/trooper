@@ -8,9 +8,9 @@ def pop():
 	sys.stdout.write(Style.BRIGHT + '==> ' + Style.RESET_ALL)
 
 @click.command()
+@click.option('--branch', default='master')
 @click.argument('git_username')
 @click.argument('repository_name')
-@click.option('--branch', '-b', default='master', help='Changes branch default is "master".')
 def cli(git_username, repository_name, branch):
 	os.system('touch ~/git_out')
 	pop()
@@ -34,3 +34,9 @@ def cli(git_username, repository_name, branch):
 
 if __name__ == '__main__':
 	cli()
+
+
+
+# Andrew Eckerman
+# http://blubrackets.github.io/blubrackets
+# http://github.com/blubrackets
